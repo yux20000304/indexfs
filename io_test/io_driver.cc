@@ -17,7 +17,8 @@ using ::indexfs::mpi::IOTaskFactory;
 
 // Use TreeTest by default
 DEFINE_string(task,
-    "tree", "Set the benchmark suite [tree|cache|replay|rpc|sstcomp]");
+    "tree", "Set the benchmark suite [tree|cache|rpc|sstcomp]");
+    // "tree", "Set the benchmark suite [tree|cache|replay|rpc|sstcomp]");
 
 DEFINE_int32(rank,
     -1, "Set the rank of a particular driver instance");
@@ -33,10 +34,10 @@ IOTask* FetchTask(int my_rank, int comm_sz) {
     task = "TreeTest";
     result = IOTaskFactory::GetTreeTestTask(my_rank, comm_sz);
   }
-  else if (FLAGS_task == "replay") {
-    task = "TraceReplayTest";
-    result = IOTaskFactory::GetReplayTestTask(my_rank, comm_sz);
-  }
+  // else if (FLAGS_task == "replay") {
+  //   task = "TraceReplayTest";
+  //   result = IOTaskFactory::GetReplayTestTask(my_rank, comm_sz);
+  // }
   else if (FLAGS_task == "sstcomp") {
     task = "ParallelCompactionTest";
     result = IOTaskFactory::GetCompactionTestTask(my_rank, comm_sz);

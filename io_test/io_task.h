@@ -84,7 +84,7 @@ struct IOTaskFactory {
   // FS metadata injection performance
   static IOTask* GetTreeTestTask(int my_rank, int comm_sz);
   // FS general metadata performance
-  static IOTask* GetReplayTestTask(int my_rank, int comm_sz);
+  // static IOTask* GetReplayTestTask(int my_rank, int comm_sz);
   // FS client-side cache effectiveness
   static IOTask* GetCacheTestTask(int my_rank, int comm_sz);
   // Parallel LevelDB major compaction
