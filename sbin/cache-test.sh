@@ -60,7 +60,7 @@ fi
 
 INDEXFS_ROOT=${INDEXFS_ROOT:-"/tmp/indexfs"}
 INDEXFS_RUN=$INDEXFS_ROOT/run
-INDEXFS_OUTPUT=$INDEXFS_RUN/tree_test
+INDEXFS_OUTPUT=$INDEXFS_RUN/cache_test
 INDEXFS_BACKEND=`$INDEXFS_HOME/sbin/idxfs.sh backend`
 
 # prepare test directories
